@@ -1,1 +1,3 @@
 # rock-paper-scissor
+lets do the project
+it's a game between two players so one can win...
