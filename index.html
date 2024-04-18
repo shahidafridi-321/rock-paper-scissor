@@ -23,7 +23,7 @@
         {
 
         let playerSelection = prompt("Rock,Paper,Scissor ").toLowerCase();
-        let computerSelection = getComputedChoice(choices);
+        let computerSelection = getComputedChoice();
         console.log(playRound(playerSelection,computerSelection));
         }
         }
@@ -48,11 +48,11 @@
     }
 
      // fuction for computer to make random choices
-     function getComputedChoice(ch)
+     function getComputedChoice()
                 {
                     let index_of_choice = Math.floor(Math.random()*3);
-                    let choisen = ch[index_of_choice];
-                    return choisen;
+                    return choices[index_of_choice];
+                   
                 }
 
 
