@@ -24,11 +24,11 @@ button:active
   background-color: rgb(161, 37, 37);
 }
 
-p,h2{
+p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: large;
 }
 h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: lightblue;
 }
 
