@@ -1,0 +1,45 @@
+body
+{
+  box-sizing: border-box;
+  margin: 0;
+  background-color: darkblue;
+}
+button,img{
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: blueviolet;
+}
+.button-container,.text-container{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+button:active
+{
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 2px 2px 5px red;
+  background-color: rgb(161, 37, 37);
+}
+
+p,h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}
+h2{
+  color: lightblue;
+}
+
+
+.text-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0;
+  line-height: normal;
+}

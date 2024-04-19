@@ -1,100 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissor Game</title>
 </head>
+
 <body>
-    <script>
-        let player_wins_counter = 0;        // thia is counter for player win,when player wins it is incremented by one for scores
-        let computer_wins_counter = 0;     // thia is counter for  win,when computer wins it is incremented by one for keeping scores
-        let choices = ["rock","paper","scissor"]; //choices for machine to choice from
-
-        playGame();      
-        getFinalResult();
-
-
-
-        // FUNCTION FOR PLAYING THE GAME FOR FIVE ROUNDS
-        function playGame()
-        {
-            for (let i = 0; i<5;i++)
-        {
-
-        let playerSelection = prompt("Rock,Paper,Scissor ").toLowerCase();
-        let computerSelection = getComputedChoice();
-        console.log(playRound(playerSelection,computerSelection));
-        }
-        }
-
-    // FUNCTION THAT SHOWS AT THE END WHO WHEN THE GAME PLAYER OR COMPUTER WITH SCORES
-    function getFinalResult()
-    {
-        if(player_wins_counter > computer_wins_counter)
-    {
-        alert("You Have Won the Game Congratulations! with the Score "+ player_wins_counter +":"+computer_wins_counter);
-    }
-    else if (player_wins_counter < computer_wins_counter)
-    {
-        alert("Computer Have Won the Game , Try Again... Scores are "+ player_wins_counter +":"+computer_wins_counter);
-
-    }
-    else
-    {
-        alert("the Game is tied , with the Scores "+ player_wins_counter +":"+computer_wins_counter);
-
-    }
-    }
-
-     // fuction for computer to make random choices
-     function getComputedChoice()
-                {
-                    let index_of_choice = Math.floor(Math.random()*3);
-                    return choices[index_of_choice];
-                   
-                }
-
-
-
-
-    // function that checks who wins player or computer,takes to parameters a player_choice and a computer_choice
-    function playRound(player_one,player_two)
-            {
-                if (player_one===player_two)
-                {
-                    let messege = "The Round is Tie! ";
-                    let result = messege + "  " + player_one.toUpperCase() +" = "+ player_two.toUpperCase() +" the score is "+ player_wins_counter +":"+computer_wins_counter; 
-                    return result;
-                }
-                else if ((player_one === "rock" && player_two === "scissor") ||
-                         (player_one === "scissor" && player_two === "paper")||
-                         (player_one === "paper" && player_two === "rock") 
-                        )
-                {
-                    let messege = "the player wins the round ";
-                    player_wins_counter++;
-                    let result = messege + player_one.toUpperCase() +" beats "+ player_two.toUpperCase()+ " the score is " + player_wins_counter +":"+computer_wins_counter;
-                    return result;
-                }
-                else if ((player_two === "rock" && player_one === "scissor") ||
-                         (player_two === "scissor" && player_one === "paper")|| 
-                         (player_two === "paper" && player_one === "rock") 
-                        )
-                {
-                    let messege = "the Computer wins the round ";
-                    computer_wins_counter++;
-                    let result = messege + player_two.toUpperCase() +" beats "+ player_one.toUpperCase()+ " the score is " + player_wins_counter +":"+computer_wins_counter;
-                    return result;
-                }
-                else
-                {
-                    let messege = "incorrect choice";
-                    i--;
-                    return messege;
-                }
-                
-            }
-    </script>
+   <div class="button-container">
+    <button><img id="rock" src="images/rock.jpg" alt="rock"></button>
+    <button><img id="paper" src="images/paper.jpg" alt="paper"></button>
+    <button><img id="scissor" src="images/scissor.jpg" alt="scissor"></button>
+   </div>
+   <div class="text-container"></div>
 </body>
+
 </html>
